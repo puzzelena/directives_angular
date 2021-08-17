@@ -10,11 +10,20 @@
           class="list-group-item">
         </li>
       </ul>
-      <li
+      <div *ngIf="onlyOdd">
+        <li
         class="list-group-item"
-        *ngFor="let number of numbers">
-        {{ number }}
-        </li>
+        *ngFor="let odd of oddNumbers">
+        {{ odd }}
+      </li>
+      </div>
+      <div *ngIf="!onlyOdd">
+        <li
+        class="list-group-item"
+        *ngFor="let even of evenNumbers">
+        {{ even }}
+      </li>
+      </div>
     </div>
   </div>
 </div>
